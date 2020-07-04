@@ -11,15 +11,13 @@ function isnum(n) {
     }
 }
 
-function inLista(n, l) {
-    if (l.indexOf(Number(n)) != -1) {
+function inLista(n, lista) {
+    if (lista.indexOf(Number(n)) != -1) {
         return true
     } else {
         return false
     }
 }
-
-} 
 
 function adicionar() {
     if(isnum(num.value) && !inLista(num.value, valores)) {
