@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mermaid test</title>
+    <style>
+        body {
+            background-image: url(https://static.vecteezy.com/system/resources/previews/000/274/467/original/mermaid-tail-pastel-background-vector.jpg);
+            color: #c2feff;
+            font: normal 20pt Arial;
+            text-align: center;
+         }
+         span {
+             color: #fbc2fc;
+         }
+         h1 {
+             text-align: center;
+             color: #fbc2fc;
+             margin-top: 200px;
+             padding-top: 50px;
+             
+         }
+         div {
+             background-color:#23024d;
+             width: 1000px;
+             height: 15cm;
+             margin: auto;
+             
+         }
+
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Mermaid Test</h1>
+      <p>Hey, what's up mate? </br>
+        Hope you're doing well! Now we'll discover if you are a <span>Mermaid</span> or not!</p>
+      <p>Ready? Answer the question below:</p>
+      <p>Were you born at the sea? Yes or No?</p>
+      <input type="text" name="answer1" id="answer1">
+      <input type="button" value="Verify" onclick="verifyspecies()">
+      <div id="result"></div>
+      <script>
+          function verifyspecies() {
+            var answer1 = window.document.getElementById('answer1')
+            var result = window.document.getElementById('result')
+            var useranswer = (answer1.value)
+            result.innerHTML = `<p>Nice, let's see...</p>`
+            if (useranswer == 'Yes') {
+                result.innerHTML += `<p>OMG! You're completely a Mermaid! Pretty cool!</p>`
+            }
+            else {
+                result.innerHTML += `<p>Oh mate... It seems you're just a human being after all. That's not bad, cheer up!</p>`
+            }
+        }
+          
+      </script>
+      </div>
+
+</body>
+</html>
