@@ -17,41 +17,51 @@
          h1 {
              text-align: center;
              color: #fbc2fc;
-             margin-top: 200px;
-             padding-top: 50px;
+             margin-top: 20px;
+             
              
          }
-         div {
+         section {
              background-color:#23024d;
-             width: 1000px;
-             height: 15cm;
-             margin: auto;
-             
+             width: 800px;
+             height: 13cm;
+             margin: auto; 
+             margin-top: 100px;
+             border-radius: 10px;
+             padding: 50px;
+             box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.342);
+
          }
 
     </style>
 </head>
 <body>
+    <section>
     <div>
     <h1>Mermaid Test</h1>
       <p>Hey, what's up mate? </br>
         Hope you're doing well! Now we'll discover if you are a <span>Mermaid</span> or not!</p>
       <p>Ready? Answer the question below:</p>
-      <p>Were you born at the sea? Yes or No?</p>
+      <p>Were you born at the sea? Answer Yes or No?</p>
       <input type="text" name="answer1" id="answer1">
       <input type="button" value="Verify" onclick="verifyspecies()">
       <div id="result"></div>
+    </section>
+
       <script>
           function verifyspecies() {
             var answer1 = window.document.getElementById('answer1')
             var result = window.document.getElementById('result')
             var useranswer = (answer1.value)
             result.innerHTML = `<p>Nice, let's see...</p>`
-            if (useranswer == 'Yes') {
+            if (useranswer == 'Yes' || useranswer == 'yes') {
                 result.innerHTML += `<p>OMG! You're completely a Mermaid! Pretty cool!</p>`
             }
-            else {
+            else if (useranswer == 'No' || useranswer == 'no') {
                 result.innerHTML += `<p>Oh mate... It seems you're just a human being after all. That's not bad, cheer up!</p>`
+            }
+            else {
+                result.innerHTML += `<p>Can't understand your answer, please, try again using Yes or No</p>`
             }
         }
           
